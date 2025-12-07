@@ -5,17 +5,29 @@ class AppConstants {
   // Colors
   static const Color primary = Color(0xFF6C5CE7);
   static const Color accent = Color(0xFF00B894);
-  static const Color surface = Color(0xFFFFFFFF);
-  static const Color mutedBg = Color(0xFFFAF7FF);
-  static const Color textPrimary = Color(0xFF111827);
   static const Color error = Color(0xFFEF4444);
 
-  // Dark theme colors
-  static const Color darkPrimary = Color(0xFF8B7CF8);
-  static const Color darkAccent = Color(0xFF00D4AA);
+  // Light theme colors (updated per user feedback)
+  static const Color lightBackground = Color(0xFFFAF7FF);
+  static const Color lightSurface = Color(0xFFFFFFFF);
+  static const Color lightTextPrimary = Color(0xFF111827);
+  static const Color lightTextSecondary = Color(0xFF6B7280);
+  static const Color lightMutedBg = Color(0xFFF3F4F6);
+
+  // Dark theme colors (updated per user feedback)
+  static const Color darkBackground = Color(0xFF0F172A);
   static const Color darkSurface = Color(0xFF1E293B);
-  static const Color darkMutedBg = Color(0xFF0F172A);
-  static const Color darkTextPrimary = Color(0xFFF1F5F9);
+  static const Color darkTextPrimary = Color(0xFFF8FAFC);
+  static const Color darkTextSecondary = Color(0xFFCBD5E1);
+  static const Color darkMutedBg = Color(0xFF334155);
+
+  // Legacy aliases for backward compatibility
+  static const Color surface = lightSurface;
+  static const Color mutedBg = lightMutedBg;
+  static const Color textPrimary = lightTextPrimary;
+  static const Color darkSurface = darkSurface;
+  static const Color darkMutedBg = darkMutedBg;
+  static const Color darkTextPrimary = darkTextPrimary;
 
   // Spacing (8px baseline)
   static const double spacingXs = 8.0;
