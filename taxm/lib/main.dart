@@ -241,8 +241,8 @@ class _TaxMatePageState extends State<TaxMatePage> {
                     'Breakdown:',
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
-                  ...(_taxResult?['bandBreakdown'] as List<Map<String, dynamic>>? ?? []).map((band) => Text(
-                        '${band['band']}: ${band['rate']} - Taxable: ₦${formatNumberWithCommas(band['taxable'])}, Tax: ₦${formatNumberWithCommas(band['tax'])}',
+                  ...(_taxResult?['bandBreakdown'] as List<dynamic>? ?? []).map((band) => Text(
+                        '${(band as Map<String, dynamic>)['band']}: ${(band as Map<String, dynamic>)['rate']} - Taxable: ₦${formatNumberWithCommas((band as Map<String, dynamic>)['taxable'])}, Tax: ₦${formatNumberWithCommas((band as Map<String, dynamic>)['tax'])}',
                         style: const TextStyle(fontSize: 14),
                       )),
                 ],
