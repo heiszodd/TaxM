@@ -98,7 +98,7 @@ Map<String, dynamic> calculateNigeriaTax2025Detailed({
       double taxInBracket = taxableInBracket * rate;
       tax += taxInBracket;
       breakdown.add({
-        'band': '₦${bracketStart.toStringAsFixed(0)} - ₦${limit == double.infinity ? '∞' : limit.toStringAsFixed(0)}',
+        'band': '₦${formatNumberWithCommas(bracketStart)} - ₦${limit == double.infinity ? '∞' : formatNumberWithCommas(limit)}',
         'rate': '${(rate * 100).toStringAsFixed(0)}%',
         'taxable': taxableInBracket,
         'tax': taxInBracket,
