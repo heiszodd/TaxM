@@ -1,59 +1,39 @@
-# TODO for TaxMate App Enhancements
+# TaxMate Enhancement TODO
 
-## Core Enhancements
-- [ ] Add flutter_riverpod and google_fonts dependencies to pubspec.yaml
-- [ ] Update color constants for new dark/light palettes
-- [ ] Implement responsive layout (mobile-first, tablet, desktop)
+## Completed Features
+- [x] Mobile-first responsiveness (LayoutBuilder in home_page.dart)
+- [x] Dark/Light mode toggle (app bar icon, auto-detect system)
+- [x] Currency fields auto-format with commas and prefix "₦"
+- [x] PrimaryButton: pill shape, gradient, microshadow, scale animation
+- [x] SecondaryButton: text button, hover elevation/color tint
+- [x] Result Card: animate fade + slide, copy-to-clipboard with toast
+- [x] Tax Band Breakdown: accordion, copy CSV, expand/collapse animation, hover highlights
+- [x] Charts: Pie chart with animations, hover shows value, accent colors
+- [x] Sample Data: sampleData() method present
+- [x] Debug banner for seeding sample values
 
-## Dark/Light Mode Toggle
-- [ ] Add theme toggle button in app bar
-- [ ] Update color schemes with specified palettes
-- [ ] Auto-detect system preference
-- [ ] Add high-contrast mode toggle
+## Pending Enhancements
+- [ ] Live preview with 300ms debounce (implement in tax_provider.dart)
+- [ ] Input presets dropdown (replace debug buttons with dropdown)
+- [ ] Inline tooltips on fields (add Tooltip widgets)
+- [ ] Keyboard shortcuts: Enter → calculate, Esc → reset (add FocusNode and RawKeyboardListener)
+- [ ] Shake animation on invalid input (add animation to CurrencyField)
+- [ ] Friendly messages with emoji/confetti (enhance ResultCard)
+- [ ] Export summary as CSV/PNG (add export buttons, use screenshot for PNG)
+- [ ] Stacked bar chart option (add toggle in TaxChart)
+- [ ] Accent color picker (add to settings or footer)
+- [ ] High-contrast mode toggle (add to theme provider)
+- [ ] Accessibility: Semantics for inputs, buttons, charts
+- [ ] Confetti effects for no/low tax scenarios
 
-## Input & Interaction Enhancements
-- [ ] Enhance currency fields with auto-formatting (commas, ₦ prefix)
-- [ ] Add 300ms debounce for live preview
-- [ ] Add input presets/sample dropdown
-- [ ] Add inline tooltips for fields
-- [ ] Implement keyboard shortcuts (Enter to calculate, Esc to reset)
-- [ ] Add shake animation for invalid input
-
-## Buttons & Micro-Interactions
-- [ ] Update PrimaryButton with pill shape, gradient, microshadow, scale animation
-- [ ] Add SecondaryButton for reset functionality
-- [ ] Add hover elevation/color tint for desktop
-
-## Result Card Enhancements
-- [ ] Add fade + slide animation on result update
-- [ ] Add copy-to-clipboard with toast confirmation
-- [ ] Add friendly messages with emoji/confetti
-- [ ] Add export options (CSV, PNG)
-
-## Tax Band Breakdown Enhancements
-- [ ] Make breakdown accordion/expandable
-- [ ] Add copy CSV action
-- [ ] Add expand/collapse animations
-- [ ] Add hover/tap highlights
-
-## Charts Enhancements
-- [ ] Update pie chart with growing animations
-- [ ] Add hover tooltips showing exact values
-- [ ] Ensure accent colors match primary
-
-## Accessibility Improvements
-- [ ] Add semantics for inputs, buttons, charts
-- [ ] Maintain proper tab order
-- [ ] Add screen reader support
-
-## Personalization Features
-- [ ] Add accent color picker
-- [ ] Implement color picker widget
-
-## Sample Data & Debugging
-- [ ] Add sampleData() if not present
-- [ ] Add debug banner toggle for seeding samples
-
-## Polish & Animations
-- [ ] Implement all specified animations and hover effects
-- [ ] Add subtle visual polish throughout
+## Implementation Plan
+1. Enhance tax_provider.dart for live preview with debounce
+2. Add tooltips to CurrencyField widgets
+3. Implement keyboard shortcuts in home_page.dart
+4. Add shake animation to CurrencyField
+5. Enhance ResultCard with friendly messages and confetti
+6. Add export functionality to ResultCard
+7. Add chart type toggle to TaxChart
+8. Add accent color picker to footer
+9. Add high-contrast mode to theme provider
+10. Add Semantics throughout the app

@@ -25,9 +25,6 @@ class AppConstants {
   static const Color surface = lightSurface;
   static const Color mutedBg = lightMutedBg;
   static const Color textPrimary = lightTextPrimary;
-  static const Color darkSurface = darkSurface;
-  static const Color darkMutedBg = darkMutedBg;
-  static const Color darkTextPrimary = darkTextPrimary;
 
   // Spacing (8px baseline)
   static const double spacingXs = 8.0;

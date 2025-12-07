@@ -29,6 +29,7 @@ class TaxMateApp extends ConsumerWidget {
   ThemeData _buildLightTheme() {
     return ThemeData(
       useMaterial3: true,
+      scaffoldBackgroundColor: AppConstants.lightBackground,
       colorScheme: ColorScheme.fromSeed(
         seedColor: AppConstants.primary,
         brightness: Brightness.light,
@@ -37,59 +38,59 @@ class TaxMateApp extends ConsumerWidget {
         headlineLarge: GoogleFonts.inter(
           fontSize: 32,
           fontWeight: FontWeight.bold,
-          color: AppConstants.textPrimary,
+          color: AppConstants.lightTextPrimary,
         ),
         headlineMedium: GoogleFonts.inter(
           fontSize: 28,
           fontWeight: FontWeight.bold,
-          color: AppConstants.textPrimary,
+          color: AppConstants.lightTextPrimary,
         ),
         headlineSmall: GoogleFonts.inter(
           fontSize: 24,
           fontWeight: FontWeight.bold,
-          color: AppConstants.textPrimary,
+          color: AppConstants.lightTextPrimary,
         ),
         titleLarge: GoogleFonts.inter(
           fontSize: 20,
           fontWeight: FontWeight.w600,
-          color: AppConstants.textPrimary,
+          color: AppConstants.lightTextPrimary,
         ),
         titleMedium: GoogleFonts.inter(
           fontSize: 18,
           fontWeight: FontWeight.w600,
-          color: AppConstants.textPrimary,
+          color: AppConstants.lightTextPrimary,
         ),
         titleSmall: GoogleFonts.inter(
           fontSize: 16,
           fontWeight: FontWeight.w600,
-          color: AppConstants.textPrimary,
+          color: AppConstants.lightTextPrimary,
         ),
         bodyLarge: GoogleFonts.inter(
           fontSize: 16,
-          color: AppConstants.textPrimary,
+          color: AppConstants.lightTextPrimary,
         ),
         bodyMedium: GoogleFonts.inter(
           fontSize: 14,
-          color: AppConstants.textPrimary,
+          color: AppConstants.lightTextPrimary,
         ),
         bodySmall: GoogleFonts.inter(
           fontSize: 12,
-          color: AppConstants.textPrimary.withOpacity(0.7),
+          color: AppConstants.lightTextSecondary,
         ),
         labelLarge: GoogleFonts.inter(
           fontSize: 14,
           fontWeight: FontWeight.w600,
-          color: AppConstants.textPrimary,
+          color: AppConstants.lightTextPrimary,
         ),
         labelMedium: GoogleFonts.inter(
           fontSize: 12,
           fontWeight: FontWeight.w600,
-          color: AppConstants.textPrimary,
+          color: AppConstants.lightTextPrimary,
         ),
         labelSmall: GoogleFonts.inter(
           fontSize: 11,
           fontWeight: FontWeight.w600,
-          color: AppConstants.textPrimary,
+          color: AppConstants.lightTextPrimary,
         ),
       ),
       inputDecorationTheme: InputDecorationTheme(
@@ -104,7 +105,7 @@ class TaxMateApp extends ConsumerWidget {
           ),
         ),
         filled: true,
-        fillColor: AppConstants.surface,
+        fillColor: AppConstants.lightSurface,
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
@@ -120,12 +121,12 @@ class TaxMateApp extends ConsumerWidget {
           ),
         ),
       ),
-      cardTheme: const CardThemeData(
+      cardTheme: CardThemeData(
         elevation: 0,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(12)),
+          borderRadius: BorderRadius.all(Radius.circular(AppConstants.borderRadius)),
         ),
-        color: Color(0xFFF8F9FA),
+        color: AppConstants.lightSurface,
       ),
     );
   }
@@ -133,6 +134,7 @@ class TaxMateApp extends ConsumerWidget {
   ThemeData _buildDarkTheme() {
     return ThemeData(
       useMaterial3: true,
+      scaffoldBackgroundColor: AppConstants.darkBackground,
       colorScheme: ColorScheme.fromSeed(
         seedColor: AppConstants.primary,
         brightness: Brightness.dark,
@@ -178,7 +180,7 @@ class TaxMateApp extends ConsumerWidget {
         ),
         bodySmall: GoogleFonts.inter(
           fontSize: 12,
-          color: AppConstants.darkTextPrimary.withOpacity(0.7),
+          color: AppConstants.darkTextSecondary,
         ),
         labelLarge: GoogleFonts.inter(
           fontSize: 14,
@@ -224,12 +226,12 @@ class TaxMateApp extends ConsumerWidget {
           ),
         ),
       ),
-      cardTheme: const CardThemeData(
+      cardTheme: CardThemeData(
         elevation: 0,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(12)),
+          borderRadius: BorderRadius.all(Radius.circular(AppConstants.borderRadius)),
         ),
-        color: Color(0xFF1E1E1E),
+        color: AppConstants.darkSurface,
       ),
     );
   }

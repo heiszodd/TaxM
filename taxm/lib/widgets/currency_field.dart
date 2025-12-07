@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
@@ -7,6 +8,7 @@ import '../utils/constants.dart';
 class CurrencyField extends StatefulWidget {
   final String label;
   final String? hint;
+  final String? tooltip;
   final double? initialValue;
   final ValueChanged<double>? onChanged;
   final String? errorText;
@@ -16,6 +18,7 @@ class CurrencyField extends StatefulWidget {
     super.key,
     required this.label,
     this.hint,
+    this.tooltip,
     this.initialValue,
     this.onChanged,
     this.errorText,
@@ -33,6 +36,7 @@ class _CurrencyFieldState extends State<CurrencyField> {
     decimalDigits: 0,
     locale: 'en_NG',
   );
+  Timer? _debounceTimer;
 
   @override
   void initState() {
@@ -161,9 +165,10 @@ class _CurrencyInputFormatter extends TextInputFormatter {
     // Format with commas
     final formatted = _formatNumber(digitsOnly);
 
+    // Let Flutter handle cursor positioning naturally
     return TextEditingValue(
       text: formatted,
-      selection: TextSelection.collapsed(offset: formatted.length),
+      selection: newValue.selection,
     );
   }
 
