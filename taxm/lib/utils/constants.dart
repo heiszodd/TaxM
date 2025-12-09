@@ -5,6 +5,7 @@ class AppConstants {
   // Colors
   static const Color primary = Color(0xFF6C5CE7);
   static const Color accent = Color(0xFF00B894);
+  static const Color success = Color(0xFF10B981);
   static const Color error = Color(0xFFEF4444);
 
   // Light theme colors (updated per user feedback)
@@ -25,6 +26,7 @@ class AppConstants {
   static const Color surface = lightSurface;
   static const Color mutedBg = lightMutedBg;
   static const Color textPrimary = lightTextPrimary;
+  static const Color textSecondary = lightTextSecondary;
 
   // Spacing (8px baseline)
   static const double spacingXs = 8.0;

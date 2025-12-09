@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 import '../utils/constants.dart';
+import 'shake_animation.dart';
 
 /// A custom text field for currency input with formatting
 class CurrencyField extends StatefulWidget {
