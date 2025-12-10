@@ -52,9 +52,14 @@ class _CurrencyFieldState extends State<CurrencyField> {
   void didUpdateWidget(CurrencyField oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (oldWidget.initialValue != widget.initialValue) {
-      _controller.text = widget.initialValue != null && widget.initialValue! > 0
+      final newText = widget.initialValue != null && widget.initialValue! > 0
           ? _formatNumber(widget.initialValue!)
           : '';
+      // Preserve selection/cursor position when updating text
+      _controller.value = _controller.value.copyWith(
+        text: newText,
+        selection: TextSelection.collapsed(offset: newText.length),
+      );
     }
   }
 
